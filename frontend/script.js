@@ -18,8 +18,11 @@ function renderProdutos(produtos){
         const card = document.createElement('div');
         card.className = 'produto';
         card.innerHTML = `
+            <div class="imagem-container">
+                <img src="${produto.imagem}" alt="${produto.nome}" />
+            </div>
             <h2>${produto.nome}</h2>
-            <p>${produto.descricao}</p>
+            <p class='descricao'>${produto.descricao}</p>
             <p class='preco'> R$ ${produto.preco}</p>
             <p><strong>Categoria:</strong> ${produto.categoria.nome}</p>
         `;
